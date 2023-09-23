@@ -1,4 +1,4 @@
-package waveform
+package lib
 
 import (
 	"math"

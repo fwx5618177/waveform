@@ -1,7 +1,7 @@
 // Command waveform is a simple utility which reads an audio file from stdin,
 // processes it into a waveform image using input flags, and writes a PNG image
 // of the generated waveform to stdout.
-package main
+package cmd
 
 import (
 	"flag"
@@ -12,7 +12,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/mdlayher/waveform"
+	waveform "github.com/mdlayher/waveform/lib"
 )
 
 const (
@@ -58,7 +58,7 @@ var (
 // fnOptions is the help string which lists available options
 var fnOptions = fmt.Sprintf("[options: %s, %s, %s, %s, %s]", fnChecker, fnFuzz, fnGradient, fnSolid, fnStripe)
 
-func main() {
+func AppRun() {
 	// Parse flags
 	flag.Parse()
 
