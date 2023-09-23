@@ -13,7 +13,7 @@ import (
 // an input audio stream.
 func ExampleGenerate() {
 	// Generate accepts io.Reader, so we will use a media file in the filesystem
-	file, err := os.Open("./test/tone16bit.flac")
+	file, err := os.Open("../test/tone16bit.flac")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -49,7 +49,7 @@ func ExampleGenerate() {
 	fmt.Printf("encoded: %d bytes\nresolution: %s", buf.Len(), img.Bounds().Max)
 
 	// Output:
-	// open: ./test/tone16bit.flac
+	// open: ../test/tone16bit.flac
 	// encoded: 344 bytes
 	// resolution: (50,256)
 }

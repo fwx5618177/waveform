@@ -11,7 +11,7 @@ import (
 var (
 	// Read in test files
 	wavFile = func() []byte {
-		file, err := ioutil.ReadFile("./test/tone16bit.wav")
+		file, err := ioutil.ReadFile("../test/tone16bit.wav")
 		if err != nil {
 			log.Fatalf("could not open test WAV: %v", err)
 		}
@@ -19,7 +19,7 @@ var (
 		return file
 	}()
 	flacFile = func() []byte {
-		file, err := ioutil.ReadFile("./test/tone16bit.flac")
+		file, err := ioutil.ReadFile("../test/tone16bit.flac")
 		if err != nil {
 			log.Fatalf("could not open test FLAC: %v", err)
 		}
@@ -27,7 +27,7 @@ var (
 		return file
 	}()
 	mp3File = func() []byte {
-		file, err := ioutil.ReadFile("./test/tone16bit.mp3")
+		file, err := ioutil.ReadFile("../test/tone16bit.mp3")
 		if err != nil {
 			log.Fatalf("could not open test MP3: %v", err)
 		}
@@ -35,7 +35,7 @@ var (
 		return file
 	}()
 	oggVorbisFile = func() []byte {
-		file, err := ioutil.ReadFile("./test/tone16bit.ogg")
+		file, err := ioutil.ReadFile("../test/tone16bit.ogg")
 		if err != nil {
 			log.Fatalf("could not open test Ogg Vorbis: %v", err)
 		}
