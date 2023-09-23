@@ -1,7 +1,7 @@
 # waveform
 
 [![Build Status](https://travis-ci.org/mdlayher/waveform.svg?branch=master)](https://travis-ci.org/mdlayher/waveform)
-[![Coverage Status](https://img.shields.io/coveralls/mdlayher/waveform.svg)](https://coveralls.io/r/mdlayher/waveform?branch=master)
+[![Coverage Status](https://img.shields.io/coveralls/mdlayher/waveform.svg)](https://coveralls.io/r/fwx5618177/waveform?branch=master)
 [![GoDoc](http://godoc.org/github.com/mdlayher/waveform?status.svg)](http://godoc.org/github.com/mdlayher/waveform)
 
 ## Documentation
