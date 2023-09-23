@@ -69,10 +69,16 @@ cat ~/Music/02\ -\ Peace\ Of\ Mind.flac | waveform -fg=#000000 -bg=#222222 -alt=
 
 ![waveform_checker](https://cloud.githubusercontent.com/assets/1926905/4961769/e3280c96-66d2-11e4-8e3c-d0b843230589.png)
 
-
 ## Usage
 
-To install and use `waveform`, simply run:
+Pre-install:
+
+```bash
+$ go mod download
+$ go get -u
+```
+
+To build `waveform`, just run:
 
 1. Build
 
@@ -87,6 +93,9 @@ $ ./waveform
 ```
 
 2. Install
+
+To install and use `waveform`, simply run:
+
 ```bash
 $ go install github.com/mdlayher/waveform/...
 ```
