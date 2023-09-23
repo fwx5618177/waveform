@@ -10,7 +10,7 @@ notifications:
 env:
   global:
     # Coveralls.io token.
-    - secure: "JtfIj2ItU0o6/wxnwaCULmPnWO1fQHrX3hGbWey56hPzybA3pQEs5YOZt16nQU5GS8p3Z3OIILUP4LGebqsLU5dyWA/GxnZv45MoZ8TS8lB7aie7l5Y6yYvq0ZBJoMWxXSY6sZJ1sKJG1F7NlQoknZToxvlkfF4nP9N5RQpL8iU="
+    - secure: "HNrDFePQtzPHSOl1LKTWoeHqPndqB35O0viW"
 
 install:
   - go get -t ./...
