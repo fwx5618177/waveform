@@ -1,8 +1,10 @@
-package waveform
+package main
 
 import (
 	"image/color"
 	"testing"
+
+	waveform "github.com/mdlayher/waveform/lib"
 )
 
 // Named colors for easy testing
@@ -59,7 +61,7 @@ func TestSolidColor(t *testing.T) {
 	}
 
 	for i, c := range colors {
-		fn := SolidColor(c)
+		fn := waveform.SolidColor(c)
 		if out := fn(i, i, i, i, i, i); out != c {
 			t.Fatalf("unexpected SolidColor color: %v != %v", out, c)
 		}
@@ -91,7 +93,7 @@ func testCheckerColor(t *testing.T, colorA color.Color, colorB color.Color) {
 	const maxX, maxY, size = 1000, 1000, 10
 
 	// Generate checker function with input values
-	fn := CheckerColor(colorA, colorB, size)
+	fn := waveform.CheckerColor(colorA, colorB, size)
 
 	// Iterate all coordinates and check color at each
 	for x := 0; x < maxX; x++ {
@@ -123,7 +125,7 @@ func testFuzzColor(t *testing.T, in []color.Color) {
 
 	// Validate that FuzzColor only produces colors which are present in
 	// the input slice.
-	fn := FuzzColor(in...)
+	fn := waveform.FuzzColor(in...)
 	for i := 0; i < 10000; i++ {
 		if out, ok := set[fn(i, i, i, i, i, i).(color.RGBA)]; !ok {
 			t.Fatalf("color not in set: %v", out)
@@ -137,7 +139,7 @@ func testGradientColor(t *testing.T, start color.RGBA, end color.RGBA) {
 	const maxN = 100
 
 	// Generate function with defined values
-	fn := GradientColor(start, end)
+	fn := waveform.GradientColor(start, end)
 
 	// Check edges
 	for i, n := range []int{0, maxN} {
@@ -163,7 +165,7 @@ func testGradientColor(t *testing.T, start color.RGBA, end color.RGBA) {
 // testStripeColor is a test helper which aids in testing the StripeColor function.
 func testStripeColor(t *testing.T, in []color.Color, out []color.Color) {
 	// Validate that StripeColor produces expected output at each index
-	fn := StripeColor(in...)
+	fn := waveform.StripeColor(in...)
 	for i := 0; i < len(out); i++ {
 		if c := fn(i, 0, 0, 0, 0, 0); c != out[i] {
 			t.Fatalf("[%02d] unexpected output color: %v != %v", i, c, out[i])

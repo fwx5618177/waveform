@@ -1,4 +1,4 @@
-package waveform
+package lib
 
 import (
 	"fmt"
@@ -103,15 +103,15 @@ func TestOptionSharpnessOK(t *testing.T) {
 	testWaveformOptionFunc(t, Sharpness(0), nil)
 }
 
-// TestWaveformSetOptionsNil verifies that Waveform.SetOptions ignores any
+// TestlibetOptionsNil verifies that Waveform.SetOptions ignores any
 // nil OptionsFunc arguments.
-func TestWaveformSetOptionsNil(t *testing.T) {
+func TestlibetOptionsNil(t *testing.T) {
 	testWaveformOptionFunc(t, nil, nil)
 }
 
-// TestWaveformSetBGColorFunction verifies that the Waveform.SetBGColorFunction
+// TestlibetBGColorFunction verifies that the Waveform.SetBGColorFunction
 // method properly modifies struct members.
-func TestWaveformSetBGColorFunction(t *testing.T) {
+func TestlibetBGColorFunction(t *testing.T) {
 	// Generate empty Waveform, apply parameters
 	w := &Waveform{}
 	if err := w.SetBGColorFunction(SolidColor(color.Black)); err != nil {
@@ -124,9 +124,9 @@ func TestWaveformSetBGColorFunction(t *testing.T) {
 	}
 }
 
-// TestWaveformSetFGColorFunction verifies that the Waveform.SetFGColorFunction
+// TestlibetFGColorFunction verifies that the Waveform.SetFGColorFunction
 // method properly modifies struct members.
-func TestWaveformSetFGColorFunction(t *testing.T) {
+func TestlibetFGColorFunction(t *testing.T) {
 	// Generate empty Waveform, apply parameters
 	w := &Waveform{}
 	if err := w.SetFGColorFunction(SolidColor(color.Black)); err != nil {
@@ -139,9 +139,9 @@ func TestWaveformSetFGColorFunction(t *testing.T) {
 	}
 }
 
-// TestWaveformSetSampleFunction verifies that the Waveform.SetSampleFunction
+// TestlibetSampleFunction verifies that the Waveform.SetSampleFunction
 // method properly modifies struct members.
-func TestWaveformSetSampleFunction(t *testing.T) {
+func TestlibetSampleFunction(t *testing.T) {
 	// Generate empty Waveform, apply parameters
 	w := &Waveform{}
 	if err := w.SetSampleFunction(RMSF64Samples); err != nil {
@@ -154,9 +154,9 @@ func TestWaveformSetSampleFunction(t *testing.T) {
 	}
 }
 
-// TestWaveformSetResolution verifies that the Waveform.SetResolution method properly
+// TestlibetResolution verifies that the Waveform.SetResolution method properly
 // modifies struct members.
-func TestWaveformSetResolution(t *testing.T) {
+func TestlibetResolution(t *testing.T) {
 	// Predefined test values
 	res := uint(1)
 
@@ -172,9 +172,9 @@ func TestWaveformSetResolution(t *testing.T) {
 	}
 }
 
-// TestWaveformSetScale verifies that the Waveform.SetScale method properly
+// TestlibetScale verifies that the Waveform.SetScale method properly
 // modifies struct members.
-func TestWaveformSetScale(t *testing.T) {
+func TestlibetScale(t *testing.T) {
 	// Predefined test values
 	x := uint(1)
 	y := uint(1)
@@ -194,9 +194,9 @@ func TestWaveformSetScale(t *testing.T) {
 	}
 }
 
-// TestWaveformSetScaleClipping verifies that the Waveform.SetScaleClipping method properly
+// TestlibetScaleClipping verifies that the Waveform.SetScaleClipping method properly
 // modifies struct members.
-func TestWaveformSetScaleClipping(t *testing.T) {
+func TestlibetScaleClipping(t *testing.T) {
 	// Generate empty Waveform, apply function
 	w := &Waveform{}
 	if err := w.SetScaleClipping(); err != nil {
@@ -209,9 +209,9 @@ func TestWaveformSetScaleClipping(t *testing.T) {
 	}
 }
 
-// TestWaveformSetSharpness verifies that the Waveform.SetSharpness method properly
+// TestlibetSharpness verifies that the Waveform.SetSharpness method properly
 // modifies struct members.
-func TestWaveformSetSharpness(t *testing.T) {
+func TestlibetSharpness(t *testing.T) {
 	// Predefined test values
 	sharpness := uint(1)
 

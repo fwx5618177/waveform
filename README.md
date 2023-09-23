@@ -1,5 +1,10 @@
-waveform [![Build Status](https://travis-ci.org/mdlayher/waveform.svg?branch=master)](https://travis-ci.org/mdlayher/waveform) [![GoDoc](http://godoc.org/github.com/mdlayher/waveform?status.svg)](http://godoc.org/github.com/mdlayher/waveform)
-========
+# waveform
+
+[![Build Status](https://travis-ci.org/mdlayher/waveform.svg?branch=master)](https://travis-ci.org/mdlayher/waveform)
+[![Coverage Status](https://img.shields.io/coveralls/mdlayher/waveform.svg)](https://coveralls.io/r/mdlayher/waveform?branch=master)
+[![GoDoc](http://godoc.org/github.com/mdlayher/waveform?status.svg)](http://godoc.org/github.com/mdlayher/waveform)
+
+## Documentation
 
 Go package capable of generating waveform images from audio streams.  MIT Licensed.
 
@@ -12,8 +17,7 @@ An example binary called `waveform` is provided which show's the library's usage
 Please see [cmd/waveform/README.md](https://github.com/mdlayher/waveform/blob/master/cmd/waveform/README.md)
 for details.
 
-Examples
-========
+## Examples
 
 Here are several example images generated using `waveform`.  Enjoy!
 
@@ -64,3 +68,54 @@ cat ~/Music/02\ -\ Peace\ Of\ Mind.flac | waveform -fg=#000000 -bg=#222222 -alt=
 ```
 
 ![waveform_checker](https://cloud.githubusercontent.com/assets/1926905/4961769/e3280c96-66d2-11e4-8e3c-d0b843230589.png)
+
+## Usage
+
+Pre-install:
+
+```bash
+$ go mod download
+$ go get -u
+```
+
+To build `waveform`, just run:
+
+1. Build
+
+```bash
+$ go build
+```
+
+The `waveform` binary is now available in the current directory. You may also wish to run it by following:
+
+```bash
+$ ./waveform
+```
+
+2. Install
+
+To install and use `waveform`, simply run:
+
+```bash
+$ go install github.com/mdlayher/waveform/...
+```
+
+The `waveform` binary is now installed in your `$GOPATH`.  It has several options available
+for generating waveform images:
+
+```
+$ waveform -h
+Usage of waveform:
+  -alt="": hex alternate color of output waveform image
+  -bg="#FFFFFF": hex background color of output waveform image
+  -fg="#000000": hex foreground color of output waveform image
+  -fn="solid": function used to color output waveform image [options: fuzz, gradient, solid, stripe]
+  -resolution=1: number of times audio is read and drawn per second of audio
+  -sharpness=1: sharpening factor used to add curvature to a scaled image
+  -x=1: scaling factor for image X-axis
+  -y=1: scaling factor for image Y-axis
+```
+
+`waveform` currently supports both WAV and FLAC audio files.  An audio stream must
+be passed on `stdin`, and the resulting, PNG-encoded image will be written to `stdout`.
+Any errors which occur will be written to `stderr`.
