@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/mdlayher/waveform/cmd"
+	"github.com/fwx5618177/waveform/cmd"
 )
 
 func main() {

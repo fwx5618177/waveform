@@ -4,7 +4,7 @@ import (
 	"image/color"
 	"testing"
 
-	waveform "github.com/mdlayher/waveform/lib"
+	waveform "github.com/fwx5618177/waveform/lib"
 )
 
 // Named colors for easy testing

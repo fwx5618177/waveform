@@ -1,8 +1,9 @@
 # waveform
 
-[![Build Status](https://travis-ci.org/mdlayher/waveform.svg?branch=master)](https://travis-ci.org/mdlayher/waveform)
+[![Build Status](https://travis-ci.org/fwx5618177/waveform.svg?branch=master)](https://travis-ci.org/fwx5618177/waveform)
 [![Coverage Status](https://coveralls.io/repos/github/fwx5618177/waveform/badge.svg?branch=master)](https://coveralls.io/github/fwx5618177/waveform?branch=master)
-[![GoDoc](http://godoc.org/github.com/mdlayher/waveform?status.svg)](http://godoc.org/github.com/mdlayher/waveform)
+[![GoDoc](http://godoc.org/github.com/fwx5618177/waveform?status.svg)](http://godoc.org/github.com/fwx5618177/waveform)
+
 
 ## Documentation
 
@@ -14,7 +15,7 @@ package is able to decode.  At the time of writing, this includes:
   - FLAC
 
 An example binary called `waveform` is provided which show's the library's usage.
-Please see [cmd/waveform/README.md](https://github.com/mdlayher/waveform/blob/master/cmd/waveform/README.md)
+Please see [cmd/waveform/README.md](https://github.com/fwx5618177/waveform/blob/master/cmd/waveform/README.md)
 for details.
 
 ## Examples
@@ -78,6 +79,12 @@ $ go mod download
 $ go get -u
 ```
 
+To run tests, just run:
+
+```bash
+$ go test -v ./...
+```
+
 To build `waveform`, just run:
 
 1. Build
@@ -97,7 +104,7 @@ $ ./waveform
 To install and use `waveform`, simply run:
 
 ```bash
-$ go install github.com/mdlayher/waveform/...
+$ go install github.com/fwx5618177/waveform/...
 ```
 
 The `waveform` binary is now installed in your `$GOPATH`.  It has several options available
@@ -119,3 +126,4 @@ Usage of waveform:
 `waveform` currently supports both WAV and FLAC audio files.  An audio stream must
 be passed on `stdin`, and the resulting, PNG-encoded image will be written to `stdout`.
 Any errors which occur will be written to `stderr`.
+
